@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notebook Login</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .notebook {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .password-input {
+      border: none;
+      border-bottom: 2px solid #ccc;
+      margin: 20px auto;
+      padding: 10px;
+      width: 200px;
+      font-size: 18px;
+      transition: border-bottom-color 0.3s ease;
+      text-align: center;
+    }
+    .password-input:focus {
+      outline: none;
+      border-bottom-color: #007bff;
+    }
+    .submit-btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="notebook">
+    <h2>Notebook Login</h2>
+    <img src="https://image.flaticon.com/icons/png/512/82/82995.png" alt="Notebook Icon" width="100">
+    <form id="loginForm">
+      <input type="password" id="password" class="password-input" placeholder="Enter Password" required>
+      <button type="submit" class="submit-btn">Login</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var password = document.getElementById("password").value;
+
+      // Verificar a senha aqui
+      if (password === "enigma") {
+        window.location.href = "enigma7.html"; // Redirecionar para outra página
+      } else {
+        alert("Senha incorreta. Tente novamente.");
+      }
+    });
+  </script>
+</body>
+</html>
